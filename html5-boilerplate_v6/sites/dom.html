@@ -1,0 +1,212 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+ <!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/dom.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <div id="main-navbar" class="main-nav">
+    <i class="fas fa-times" id="navClose"></i>
+    <a id="seLogo" href="../index.html">SE</a>
+    <ul id="navbar">
+        <li>
+            <a href="../blog.html" class="navLink">Blog</a>
+        </li>
+        <li>
+            <a href="../services.html" class="navLink">Services</a>
+        </li>
+    </ul>
+</div>
+<div class="container-fluid" id="mainContent">
+  <div id="particles-js"></div>
+  <div id="domIntro">
+  <div class="jumbotron">
+    <h2>DOM DOM DOM</h2>
+    <!-- <p>(You have to read it right.)</p> -->
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12" id="pageContent">
+<div class="">
+ <p>Real quick JS DOM walkthough.</p>
+  <p>What's the DOM?</p>
+  <p>It's the Document Object Model.</p>
+  <p>It lets us grab everything that is on the page, or create and put it on the page.</p>
+  <p>Show me...</p>
+  <button type="button" class="btn btn-primary" id="firstButton">Click Me</button>
+  <div class="container hide" id="firstExplanation">
+    <p>Now you see me</p>
+    <p>To show exaclty what's going we're going the long way about this.</p>
+    <ol>
+    <li>First we have to get the button that is going to trigger the collapsing and expanding of the hidden div.</li>
+    <lil>let firstButton = document.getElementById('firstButton');</li>
+    <li>Then we have to add a click event listener. (<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventListener" target="blank">Here's</a> the full list).</li>
+    <li class="codeSnippet">firstButton.addEventListener('click', function(){</li>
+    <li>Then our function, we'll make use of the Javascript toggle method.</li>
+ <li class="codeSnippet">  firstExplanation.classList.toggle('hide');
+})</li>
+<li>This is just checking to see if element contains the class hide. If it does, it will remove it. If not, it adds it.</li>
+<li class="sideNote">* We could do this ourselves using boolean values.</li>
+  </ol>
+  </div> <!-- END HIDDEN DIV-->
+  <P>You can toggle the div.</P>
+  </div>
+  <div class="container" id="domNotes">
+    <div class="testingDOM">
+    <h4>But lets go back to the beginning.</h4>
+    <p>The DOM starts with the root html element.</p> 
+    <p>Then we have the DOM tree - every HTML tag is an object.</p>
+    <p>Nested tags are "children" of the enclosing one.</p>
+    <p>Keep going - the text inside the tag is an object as well.</p>
+    <p>These nested tags are children of the enclosing ones.</p>
+    <p>There are also descendants - these are all elements that are nested in the given one. So, it's children, their children and then their children...</p>
+  </div>
+    <h5>Cool, but I need to get to it before I can do anything.</h5>
+    <p>Fret not...</p>
+    <p>If you want to interact with the HTML from your JS, it must include a document object.</p>
+    <p>Did you notice when the page loaded there was a blue background that faded out? Refresh you'll see.</p>
+    <p>It was this line of JS - <span class="cod">setTimeout(() => document.body.style.background = "", 1000);</span></p>
+<div class="container">
+  <h3>childNodes</h3>
+    <p>Child Nodes give you the element and the text.</p>
+    <p>Check this out...</p>
+  </div>
+    <div id="childNodesExample">
+      <table class="table table-bordered">
+        <tr>
+          <td>1</td>
+          <td id="element">
+            <span>2</span>
+          </td>
+          <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td id="element2">5
+            </td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+      </table>
+    </div>
+  </div>
+  <div class="container">
+    <div class="screenshot"> 
+      <p>Here's the HTML for the table above.</p>
+      <img src="img/childNodeTable.png" alt="Screenshot of table used">
+    </div>
+    <p>If we grab that highlighted cell with the 2.</p>
+    <code>let tableHighlight = document.getElementById('element');</code>
+<code>tableHighlight.classList.add('highlightTable');</code>
+<code>
+console.log(element.childNodes);</code>
+<p>What we get is: NodeList(3) [text, span, text] </p>
+<p>Now let's delete the spaces.</p>
+<img src="img/childNodeTableNoSpace.png" alt="Screenshot of table used">
+<p>Same JS to get the childNodes</p>
+<p>But this time, we only get: NodeList [span]</p>
+<p>There are no spaces to account for.</p>
+<p>To get only the elements, use children.</p>
+</div>
+<div class="container">
+<h3>Children</h3>
+<p>Same cell from our table: </p>
+<code>console.log(element.children);</code>
+<p>What we get is:HTMLCollection [span]</p>
+<h5>Cool... So what?</h5>
+<p>Well we can do this: element.children[0].classList.add('goGreen');</p>
+<p>The first child of the element tag will now have the green background.</p>
+<img src="img/tableImage.png" alt="Image of table used earlier">
+<p>It's just the 2 that has the green background.</p>
+<p>Notice the children[0] - when you grab it, it's stored in a Node list.</p>
+<p>So you have to grab it accordingly.</p>
+<p>Another one, here's the table again.</p>
+<img src="img/childNodeTableNoSpace.png" alt="Screenshot of table used">
+<p>var mainDiv = document.getElementById('childNodesExample');
+mainDiv.classList.add('yellowish');</p>
+<p>This is getting the first child of main container childNodesExample and giving it a yellowish background.</p>
+    <img src="img/siblingsTable.png" alt="Screenshot of table used">
+  </div>
+  <div class="container">
+    <h3>nextSibling</h3>
+    <p>Again #text nodes are inserted in the DOM where whitespace occurs between tags.</p>
+    <p>As with childNodes.</p>
+    <p>So bump that... Unless you know you have no whitespace.</p>
+    <p>I go with: </p>
+    <h3>nextElementSibling</h3>
+    <img src="img/siblingsTable.png" alt="Screenshot of table used">
+    <p>This time we'll get the next Element.</p>
+    <p>The table cell.</p>
+    <code>siblingTest.nextElementSibling.classList.add("goGreen");
+</code>
+<p>Notice cell 6 is green.</p> 
+<img src="img/tableImage.png" alt="Image of table used earlier">
+<p>It's the next element sibling of cell 5 (which has the id element2 JS variable siblingTest.</p>
+<p>We can console it and see it's: td class="goGreen">6</p>
+<p>Want the element before it?</p>
+<p>siblingTest.previousElementSibling.classList.add("blueish");</p>
+<p>That is how cell 4 is blue.</p>
+<p>It is the previous Element sibling of the cell with 5, the ID of element2..</p>
+</div>
+<div class="container" id="bottom-container">
+  <h3>parentNode</h3>
+  <p>This lets us grab the parent of the element.</p>
+  <img src="img/siblingsTable.png" alt="Screenshot of table used">
+  <p>Lets add a 2px solid red border around the parent of element td that has the value text 5, id of element2.</p>
+  <code>let siblingTest = document.getElementById('element2');</code>
+  <code>siblingTest.parentNode.classList.add("redBorder");</code>
+  <p>Still using element2 as our base.</p>
+ <code> siblingTest.parentNode.nextElementSibling.classList.add("purpleBorder");</code>
+ <p>Will give us the next rows.</p>
+ <p>The parent of td is the tr.</p>
+ <p>It's nextElementSibling is the next tr.</p>
+<p>So we've gone up the DOM, Sideways and down.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <!-- JS, Popper.js and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+
+</body>
+
+</html>

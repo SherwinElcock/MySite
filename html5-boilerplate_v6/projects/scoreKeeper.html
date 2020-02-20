@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ScoreKeeper</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="keeper.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <style type="text/css">
+  html{
+    font-family: 'Montserrat', sans-serif;
+  }
+    #score{text-align: center;}
+    h1{text-align: center;}
+    p{text-align: center;}
+    #input{text-align: center;}
+    #players{text-align: center;
+      padding-top: 3em;}
+
+  </style>
+  </head>
+  <body>
+    <h1 id="score">Score Is: </h1>
+
+    <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
+
+<p>Playing to: <span>5</span></p>
+
+<div id="input">
+<input type="number">
+</div>
+<div id="players">
+<button id="p1">Player One</button>
+<button id="p2">Player Two</button>
+<p>
+<button id="reset">Reset</button>
+</p>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="keeper.js"></script>
+  </body>
+</html>

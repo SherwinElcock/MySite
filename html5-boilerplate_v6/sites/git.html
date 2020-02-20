@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>GitHub Commands</title>
+      <meta name="GitHub Basics" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="manifest" href="site.webmanifest">
+      <link rel="apple-touch-icon" href="icon.png">
+      <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+       <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+       <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="style/vocab.css"> -->
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/gitCss.css">
+      <link rel="stylesheet" href="../css/navbar.css">
+      <!-- <link rel="stylesheet" href="css/navbar.css"> -->
+   </head>
+   <body>
+      <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]--> 
+
+       <div id="main-navbar" class="main-nav">
+         <i class="fas fa-times" id="navClose"></i>
+         <a id="seLogo" href="../index.html">SE</a>
+         <ul id="navbar">
+             <li>
+                 <a href="../blog.html" class="navLink">Blog</a>
+             </li>
+             <li>
+                 <a href="../services.html" class="navLink">Services</a>
+             </li>
+         </ul>
+     </div>
+  
+      <div id="gitLanding">
+         <div id="particles-js"></div>
+         <div id="landText">
+            <h1 id="" class="myGuide animated bounce">Github Simple Guide</h1>
+            <p class="lead wow fadeIn">My notes... Maybe you'll find it helpful.</p>
+         </div>
+      </div>
+      <div class="container">
+         <p class="lead animated pulse"><a href="vocab.html">Here's</a> some vocab you'll need. </p>
+      </div>
+      <div class="container animated slideInRight" id="qLinks">
+         <!-- <h4 id="jumpTo">Jump to <button id="linkHide">Sections</button></h4> -->
+         <ul id="gitLinks">
+            <li><a href="#createRepo">Create Repo</a></li>
+            <li><a href="#clone">Clone</a></li>
+            <li><a href="#add">Add Files</a></li>
+            <li><a href="#commit">Commit</a></li>
+            <li><a href="#branch">Branch</a></li>
+            <li><a href="#push">Push</a></li>
+            <li><a href="#uAndm">Update and Merge</a></li>
+         </ul>
+      </div>
+      <div class="container">
+         <h2 id="createRepo" class="wow animated slideInLeft">Create local git repository</h2>
+         <p class="lead">If you're creating the new project on your local machine, we have to make it a git repo.</p>
+         <p class="lead">I use terminal, it's a breeze.</p>
+         <p class="lead">Go to the directory you want to save the project and run: </p>
+         <div class="codeSamp wow lightSpeedIn">
+            <code>git init</code>
+         </div>
+         <p class="lead">Go to your GitHub page and click the New Repository button.</p>
+         <img src="img/git1.png" alt="GitHub landing page" class="gitPic">      
+         <p class="lead">Give it a name, description, select either public or private, I always check the box to, "Initialize this repository with a README"</p>
+         <p class="lead">Click, "Create repository" button.</p>
+         <img src="img/git2.png" alt="GitHub landing page" class="gitPic">
+         <p class="lead">It'll take you to the <a href="vocab.html#repository">repository</a>. You'll have one file a "README.md". It'll show initial
+            commit with how long ago and your description will display.
+         </p>
+         <h2 id="clone" class="wow animated pulse">Cloning Repository</h2>
+         <div class="wow animated flipInX">
+            <p class="lead">Now we need to <a href="vocab.html#clone">clone</a> this repo to our local machine.</p>
+            <p class="lead">Click the button to, "Clone or download" and copy the url.</p>
+            <p class="lead">Back to terminal: </p>
+            <div class="codeSamp">
+               <code>git clone &#60; the url you copied &#62; </code>
+            </div>
+            <p class="lead"> You should get a message showing:</p>
+            <div class="codeSamp wow animated lightSpeedIn">
+               <code>remote: Counting objects: 3, done.</code>
+               <code>remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</code>
+               <code>Unpacking objects: 100% (3/3), done.</code>
+            </div>
+            <p class="lead">You can jump into that directory. You will now see a git folder that you can expand and see its contents, also you have your README file.</p>
+         </div>
+      </div>
+      <div class= "container">
+         <h4>Great Now What?</h4>
+         <h2 id="add" class="wow animated pulse">Add files</h2>
+         <p class="lead">What files? The files you tell it to.</p>
+         <div class="codeSamp wow lightSpeedIn">
+            <code>git add &#60; filename &#62; </code>
+            <p>OR</p>
+            <code>git add .</code>
+         </div>
+         <p class="lead">This will add everything that's changed and any new files that have not been tracked yet.</p>
+         <h2 id="commit" class="wow animated pulse">Now let's commit</h2>
+         <div class="codeSamp wow lightSpeedIn">
+            <code>git commit -m "Message about what are you committing"</code>
+         </div>
+         <div class="container">
+            <p class="lead warning">- If you forget to add the message, you will get taken to the VI editor with the
+               chance to input. If you're not familiar with it, <button class="btn btn-primary errorInfo" type="button" data-toggle="collapse" data-target="#viEditor" aria-expanded="false" aria-controls="viEditor">
+               Click Here
+               </button>.
+            </p>
+            <div class="collapse" id="viEditor">
+               <div class="card card-body">
+                  <p>Input a colon and then q!.</p>
+                  <p>When you have time, you should definitely check out this site.</p>
+               </div>
+            </div>
+         </div>
+         <h2 id="branch" class="wow animated pulse">Branch</h2>
+         <p class="lead">To work on something before merging into master branch we create and checkout a branch.</p>
+         <p class="lead">Let's do this...</p>
+         <div class="codeSamp wow lightSpeedIn">
+            <code>git checkout -b &#60; your branch name &#62;</code>
+         </div>
+         <p class="lead">This creates a new branch and moves you to it.</p>
+         <p class="lead">You can check what branch you're on with:</p>
+         <div class="codeSamp wow lightSpeedIn">
+            <code>git status </code>
+            <p>OR</p>
+            <code> git branch</code>
+         </div>
+         <p class="lead">Make your changes, then we have to...</p>
+         <div class="codeSamp wow lightSpeedIn">
+            <code>git add .</code>
+          </div>
+          <P class="lead">And then...</P>
+          <div class="codeSamp wow lightSpeedIn">
+            <code>git commit -m &#60; "your message" &#62; </code>
+         </div>
+         <h2 id="push" class="wow animated pulse">Push</h2>
+         <p class="lead">We have to push our changes, send those suckers to the remote repository.</p>
+         <div class="codeSamp wow lightSpeedIn">
+            <code>git push origin &#60; branch you want to push changes to &#62;</code>
+         </div>
+         <p class="lead">Back to github.</p>
+         <p class="lead">You'll now see you have a pull request.</p>
+         <p class="lead">Click the create pull request button.</p>
+         <p class="lead">*Usually this would be for someone else to review your changes and ensure they want to implement.</p>
+         <p class="lead">In our case, you can click the merge pull request button, then confirm it.</p>
+         <p class="lead">You'll get message that the, "Pull request successfully merge and closed."
+         <p class="lead">You can delete the branch now, or wait.</p>
+         <p class="lead">At the top of the window, you'll have a message that says,
+            "Merged NAME merged 1 commit into master from BRANCH just now"
+         </p>
+         <p class="lead">Nice! You've just merged your changes into the repo.</p>
+         <p class="lead">Go to the file you just changed on Git, you'll see the updates.</p>
+         <p class="lead">You should also now have your 2 branches. This is the sweet spot. You can go back to those at any time and branch again.</p>
+         <p class="lead">Stop saving myfile1, myfile2, myfile873!</p>
+         <div id=upAndMerg>
+            <h2 id="uAndm" class="wow animated pulse">Update and Merge</h2>
+            <p class="lead">Their have been changes to your repo. We need to update our local repository.</p>
+            <div class="codeSamp wow lightSpeedIn">
+               <code>git pull</code>
+            </div>
+         </div>
+         <div class="tenor-gif-embed gitPic" data-postid="5220244" data-share-method="host" data-width="100%" data-aspect-ratio="1.8651685393258426"><a href="https://tenor.com/view/boomroasted-theoffice-gif-5220244">Boom Roasted GIF</a> from <a href="https://tenor.com/search/boomroasted-gifs">Boomroasted GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+      </div>
+
+        <!-- JS, Popper.js and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+      <script src="js/plugins.js"></script>
+      <!-- <script src="js/main.js"></script> -->
+      <script src="js/anim_wow.js"></script>
+      <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+      <script>
+         window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+         ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+      </script>
+      <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+      <script type="text/javascript">new WOW().init();</script>
+      <script src="../js/particles.js"></script>
+      <script src="../js/app.js"></script>
+   </body>
+</html>

@@ -1,0 +1,461 @@
+<!doctype html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>GitHub Commands</title>
+      <meta name="GitHub Basics" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="manifest" href="site.webmanifest">
+      <link rel="apple-touch-icon" href="icon.png">
+      <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+       <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+       <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="style/vocab.css"> -->
+      <link rel="stylesheet" href="css/normalize.css">
+ 
+      <link rel="stylesheet" href="css/heading.css">
+      <link rel="stylesheet" href="../css/navbar.css">
+<link rel="stylesheet" href="css/cssStyles.css">
+   </head>
+   <body>
+    <div id="main-navbar" class="main-nav">
+        <i class="fas fa-times" id="navClose"></i>
+        <a id="seLogo" href="../index.html">SE</a>
+        <ul id="navbar">
+            <li>
+                <a href="../blog.html" class="navLink">Blog</a>
+            </li>
+            <li>
+                <a href="../services.html" class="navLink">Services</a>
+            </li>
+        </ul>
+    </div>
+    <div class="jumbotron blog-intro">
+        <div id="particles-js"></div>
+        <h1 class="display-4">Sass</h1>
+        <p class="lead">Install steup and using to save time.</p>
+       
+      </div>
+
+      <div class="" id="mainContent">
+        <div id="sideSections">
+          <h4>Sections</h4>
+          <ul>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#using">Using</a></li>
+            <li><a href="#variables">Variables</a></li>
+            <li><a href="#nesting">Nesting</a></li>
+            <li><a href="#partials">Partials</a></li>
+            <li><a href="#mixins">Mixins</a></li>
+            <li><a href="#extend">Extend</a></li>
+            <li><a href="#operators">Operators</a></li>
+            <li><a href="#functions">Functions</a></li>
+            <!-- <li><a href="#output">Output</a></li> -->
+    
+          </ul>
+        </div>
+      
+      <div id="theStuff">
+        <div id="explain">
+          <div class="codeXplain wow animated slideInLeft" id="xSass"><P>Sass</P>
+            <code>Input has a pink background.</code></div>
+          <div class="codeXplain wow animated slideInRight" id="pCss"><p>CSS</p>
+            <code>Output has black background.</code></div>
+        </div>
+      <h2 class="sectionHead wow animated flipInX" id="installation">Installation</h2>
+      <p class="lead">Let's go. I use homebrew as my package manager. So I installed Sass with: <span class="command">brew install sass/sass/sass</span>.</p>
+      <p class="lead">Double check the installation with: <span class="command">sass -v</span>.</p>
+      
+        
+      <h2 class="sectionHead wow animated flipInX" id="using">Using Sass</h2>
+      <p class="lead">Now we need to create our Sass file. In our directory we'll <span class="command">touch style.scss</span>.</p>
+      <p class="lead">Then we need to tell Sass where to put the CSS.</p>
+      <div class="codeSection wow animated zoomInUp">
+        <code>sass --watch style.scss:styles.css</code>
+      </div>
+      <p class="lead">You'll ge a message that'll tell you Sass is watching for changes. Press Ctrl-C to stop...</p>
+      <p class="lead">Open style.scss in your text editor, we'll start with just changing some colors.</p>
+      <p class="lead">In our style.scss file we'll create some variables.</p>
+      <div class="codeSection sassCode wow animated zoomInUp">
+        <code>$cowboyBlue: #003594;<br></code>
+        <code>$dodgerBlue: #005A9C;</code>
+      </div>
+      <p class="lead">To use them, in the same file.</p>
+      <div class="codeSection sassCode wow animated zoomInUp">
+       <code>h1 {
+        color:$cowboyBlue;
+       }</code>
+      </div>
+      <p class="lead">This is going to output plain CSS in your main CSS file:</p>
+        <div class="codeSection wow animated zoomInUp">
+          <code>h1{
+            color: #003594;
+          }</code>
+      </div>
+      <div class="section">
+        <h2 class="sectionHead wow animated flipInX" id="variables">Variables</h2>
+        <p class="lead">A spot for you to put stuff you want to use again.</p>
+        <p class="lead">Do you really want to keep typing, #003594 repeatedly?</p>
+        <p class="lead">What happens if you want to change it?</p>
+        <p class="lead">Good luck finding them all.</p> 
+        <p class="lead">With Sass, we can create a variable to hold that info.</p>
+        <p class="lead">Make sure that when you declare and use it, you put the $ in front.</p>
+        <p class="lead">Should you need to change all the places you use that color/variable. You now just have to change it in one place.</p>
+        <h4 class="subsection">Rules for Naming Variables</h4>
+        <p class="lead">Name them whatever the flip you want.</p>
+        <p class="lead">Just make sure that when you declare and use, you put the $ before it.</p>
+        <p class="lead">You can use hyphens and underscores. They are interchangeable.</p>
+        <p class="lead">You can declare using a hypen, then access with an underscore.</p>
+          <div class="codeSection sassCode wow animated zoomInUp">
+        <code>$cowboy_Blue: #003594;<br></code>
+        <code>$dodger-Blue: #005A9C;</code>
+      </div>
+        <p class="lead">Access</p>
+          <div class="codeSection sassCode wow animated zoomInUp">
+       <code>h1
+        color:$cowboy-Blue;
+       }<br></code>
+       <code>
+         p{
+         color:$dodger_Blue;
+       }
+       </code>
+      </div>
+        <p class="lead">Will output the in your CSS file</p>
+          <div class="codeSection wow animated zoomInUp">
+       <code>h1 {
+        color:#003594;
+       }<br></code>
+       <code>
+         p{
+         color: #005A9C;
+       }
+       </code>
+      </div>
+      <h2 class="sectionHead wow animated flipInX" id="nesting">Nesting</h2>
+        <p class="lead">You can put a varaible in a selector.</p>
+        <p class="lead">But you're going to limit the scope, it will only e available within that level of selectors.</p>
+        <p class="lead">So, this is legal.</p>
+              <div class="codeSection sassCode wow animated zoomInUp">
+    <code>#testing {<br>
+        $para_Text: red;<br>
+        padding: 2em 3em;<br>
+    }</code>
+      </div>
+        <p class="lead">But if you try to access that $para_Text anywhere else. You're in for some trouble.</p>
+        <p class="lead">You can get around it by defining it outside of variables or, putting !global.</p>
+                  <div class="codeSection sassCode wow animated zoomInUp">
+    <code>#testing {<br>
+        $para_Text: red !global;<br>
+        padding: 2em 3em;<br>
+    }</code>
+      </div>
+      <h2 class="sectionHead wow animated flipInX" id="partials">Partials</h2>
+        <p class="lead">A partial Sass file that you can include in another Sass file.</p>
+        <p class="lead">Modularize your style sheets.</p>
+        <p class="lead">You save it with a leading underscore.</p>
+        <p class="lead">That lets Sass know that it is nly partial file and should not be generated into a CSS file.</p>
+        <p class="lead">It is going to be used with an @import directive in the file it's needed.</p>
+        <p class="lead">In our _codeSection scss file.</p>
+                      <div class="codeSection sassCode wow animated zoomInUp">
+    <code>
+      $codeSecWidth:50%;<br>
+      $codePadding: 1em 2em;<br>
+      $codeBackground: black;<br>
+    }</code>
+      </div>
+        <p class="lead">Then we use it in the main scss file.</p>
+                          <div class="codeSection sassCode wow animated zoomInUp">
+    <code>
+    @import "codeSection"</code>
+    <code>
+    .codeSection{<br>
+    width: $codeSecWidth;<br>
+    padding: $codePadding;<br>
+    background-color: $codeBackground;<br>
+    }</code>
+      </div>
+        <p class="lead">It's going to output your regular CSS.</p>
+    <div class="codeSection wow animated zoomInUp">
+       <code> .codeSection {<br>
+      width: 50%;<br>
+      padding: 1em 2em;<br>
+      background-color: black;<br>} </code>
+    </div>
+    <h2 class="sectionHead wow animated flipInX" id="mixins">Mixins</h2>
+        <p class="lead">A mixin is a groups of CSS declarations that we want to reuse.</p>
+        <p class="lead">So our vendor prefixes are a perfect example.</p>
+                              <div class="codeSection mixinExample sassCode wow animated zoomInUp">
+    <code>@mixin transform($property){<br>
+      -webkit-transform: $property;<br>
+      -ms-transform: $property;<br>
+      transform: $property;<br>
+    }
+    </code>
+    </div>
+    <p class="lead">Called here, with the @include.</p>
+    <div class="codeSection mixinExample sassCode wow animated zoomInUp">
+    <code>
+      .mixinExample{<br>
+      @include transform(rotate(5deg));<br>
+      position: relative;<br>
+      top: 2em;<br>
+    }
+    
+    </code>
+      </div>
+        <p class="lead">CSS output.
+        </p>
+        <div class="codeSection wow animated zoomInUp">
+          <code>
+    .mixinExample {<br>
+      -webkit-transform: rotate(5deg);<br>
+      -ms-transform: rotate(5deg);<br>
+      transform: rotate(5deg);<br>
+      position: relative;<br>
+      top: 2em; <br>}</code>
+        </div>
+        <p class="lead">We're passing in our 5deg rotation with the $property variable.</p>
+        <h2 class="sectionHead wow animated flipInX" id="extend">Extend/Inheritance</h2>
+        <p class="lead">@extend lets us share a set of CSS properties from one selector to another. </p>
+        <p class="lead">Let's just take a div for our example.</p>
+        <p class="lead">We can give it certain properties they will share.</p>
+                <div class="codeSection sassCode wow animated zoomInUp">
+          <code>
+    .ourdiv {<br>
+      padding: 15px;<br>
+    background-color: gray;<br>
+    color: white;<br>}</code>
+        </div>
+        <p class="lead">Then use @extend directive to "customize" it for each additional purpose.</p>
+            <div class="codeSection sassCode wow animated zoomInUp">
+          <code>
+    .goodDiv{<br>
+      @extend .alert;<br>
+      background-color: green;<br>
+    }</code>
+    <code>
+      .badDiv{<br>
+      @extend .alert;<br>
+      background-color: red;<br>
+    }
+    </code>
+        </div>
+        <p class="lead">This will compile to this.</p>
+                <div class="codeSection wow animated zoomInUp">
+      <code>.ourdiv, .goodDiv, .badDiv {<br>
+      padding: 15px;<br>
+      background-color: gray;<br>
+      color: white; <br>}
+    </code>
+    <code>.goodDiv {
+      background-color: green; }</code>
+      <code>.badDiv {
+      background-color: red; }</code>
+        </div>
+        <p class="lead">You can use multiple Extends or chain them together.</p>
+        <div class="codeSection sassCode wow animated zoomInUp">
+          <code>ourdiv {<br>
+      padding: 15px;<br>
+    background-color: gray;<br>
+    color: white;<br>}<br><br>
+    
+    .coolDiv{<br>
+      box-shadow: 5px 5px #888888;<br>
+    }<br>
+    
+    .goodDiv{<br>
+      @extend .ourdiv;<br>
+      @extend .coolDiv;<br>
+      background-color: green;<br>
+    }</code>
+        </div>
+    
+        <p class="lead">CSS file</p>
+            <div class="codeSection goodDiv wow animated zoomInUp">
+          <code>.ourdiv, .goodDiv, .badDiv {<br<br>>
+      padding: 15px;<br>
+      background-color: gray;<br><br>
+      color: white; <br><br>}
+    
+    .coolDiv, .goodDiv {<br>
+      box-shadow: 5px 5px #888888; <br>}
+    
+    .goodDiv {<br>
+      background-color: green; <br>}
+    }</code><br>
+        </div><br>
+        <p class="lead">Or you can chain the Extends together.</p><br>
+        <p class="lead">So, we're not going to have 2 extends in our .goodDiv.</p>
+        <p class="lead">We'll do this.</p>
+        <div class="codeSection mehDiv sassCode wow animated zoomInUp">
+    <code>.ourdiv {<br>
+      padding: 15px;<br>
+    background-color: gray;<br>
+    color: white;<br>}
+    
+    .coolDiv{<br>
+    @extends .ourdiv;<br>
+      box-shadow: 5px 5px #888888;<br>
+    }<br>
+    
+    .mehDiv{<br>
+      @extends .cooldiv;<br>
+      background-color: orange;<br>
+    }</code>
+        </div>
+        <p class="lead">Compiled CSS</p>
+        <div class="codeSection mehDiv wow animated zoomInUp">
+    <code>.ourdiv, .goodDiv, .badDiv {<br>
+      padding: 15px;<br>
+      background-color: gray;<br>
+      color: white; <br>}
+    
+    .coolDiv, .goodDiv {<br>
+      @extends .ourdiv;<br>
+      box-shadow: 5px 5px #888888; <br>}<br>
+    
+    .mehDiv {<br>
+      @extends .cooldiv;<br>
+      background-color: orange; <br>}</code>
+        </div>
+        <p class="lead">As you can see, this can be helpful.</p>
+        <p class="lead">To make it even sweeter, you can use placeholder selectors.</p>
+        <p class="lead">These won't actually be compiled to CSS, their sole purpose is to extend anothe selector.</p>
+        <p class="lead">You start with a % (percent sign).</p>
+        <p class="lead">This placeholder selector from your Sass file will be used to extend other selectors, but it won't be compiled into you final CSS.
+        </p>
+        <div class="codeSection placeDiv sassCode wow animated zoomInUp">
+          <code>
+            %whoa{<br>
+      font-size: 2em;<br>
+    }<br>
+    
+    .placeDiv{<br>
+      @extend %whoa;<br>
+      @extend .coolDiv;<br>
+    }
+          </code>
+        </div>
+        <p class="lead">Compiled CSS</p>
+        <div class="codeSection placeDiv wow animated zoomInUp">
+          <code>
+            .coolDiv, .goodDiv, .placeDiv {<br>
+      @extends .ourdiv;<br>
+      box-shadow: 5px 5px #888888; }<br>
+      .placeDiv {
+      font-size: 2em; }
+          </code>
+        </div>
+        <p class="lead">Our %whoa selector is nowhere to be found, but as you can see, it is still being used.</p>
+        <h2 class="sectionHead wow animated flipInX" id="operators">Operators</h2>
+        <p class="lead">To help work with numbers... width, padding... Whatever you use it for. We can use operators.</p>
+        <table>
+          <tr>
+          <thead>Equality Operators</thead>
+          </tr>
+          <tr>
+            <td>==</td>
+            <td>Equal to</td>
+          </tr>
+                <tr>
+            <td>!=</td>
+            <td>Not equal to</td>
+          </tr>
+        </table>
+        <p class="lead">There are also number operators we can use them to perform calculations.</p>
+        <table id="operatorsTab">
+          <thead>Number Operators</thead>
+          <tr>
+            <td>+</td>
+            <td>Addition</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>Subtraction</td>
+          </tr>
+          <tr>
+            <td>*</td>
+            <td>Multiplication</td>
+          </tr>
+                <tr>
+            <td>/</td>
+            <td>Division</td>
+          </tr>
+                <tr>
+            <td>%</td>
+            <td>Modulo</td>
+    
+        </table>
+        <p class="lead">So we can use Sass to calculate width percentages.</p>
+        <div class="codeSection sassCode wow animated zoomInUp">
+         <code>#operatorsTab{
+      width: 300px/960px *100%;
+    }</code>
+        </div>
+        <p class="lead">Will give us a CSS output of:</p>
+            <div class="codeSection wow animated zoomInUp">
+         <code>#operatorsTab {
+      width: 31.25%; }</code>
+        </div>
+        <p class="lead">If you need to the operators also work on colors and Strings.</p>
+        <p class="lead">So if want to, you can add hex values together.</p>
+        <p class="lead">Oh, you can also use Boolean Operators... and, or and not.</p>
+        <p class="lead">I'll get back when I have a concrete example.</p>
+        <h2 class="sectionHead wow animated flipInX" id="functions">Functions</h2>
+        <p class="lead">Use these when you want to reuse a part of the code.</p>
+        <p class="lead">Say you want to make a function for your padding.</p>
+           <p class="lead">So my Sass is going to look like this.</p>
+        <div class="codeSection sassCode wow animated zoomInUp">
+          <code>
+    @function calcfunction($number, $number2){<br>
+      @return $number + $number2<br>
+    }
+    
+    .module {
+      padding: calcfunction(10px, 5px);
+    }      </code>
+        </div>
+        <p class="lead">CSS output</p>
+        <div class="codeSection wow animated zoomInUp">
+         <code> .module {
+      padding: 15px; }</code>
+        </div>
+      </div>
+    <div class="container-fluid" id="stuck">
+      <h2 class="sectionHead">Want more info or something still not clicking?</h2>
+      <p class="lead">Here are my go to resources...</p>
+      <ul>
+            <li class="lead"><a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank">Sass Docs</a></li>
+        <li class="lead"><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+      </ul>    
+    </div>
+    </div>
+    </div>
+    <div id="pointer"><a href="/blog.html"><i class="fas fa-hand-point-left"></i></a></div>
+
+            <!-- JS, Popper.js and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+      <script src="js/plugins.js"></script>
+      <!-- <script src="js/main.js"></script> -->
+      <script src="js/anim_wow.js"></script>
+      <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+      <script>
+         window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+         ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+      </script>
+      <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+      <script type="text/javascript">new WOW().init();</script>
+      <script src="../js/particles.js"></script>
+      <script src="../js/app.js"></script>
+   </body>
+</html>

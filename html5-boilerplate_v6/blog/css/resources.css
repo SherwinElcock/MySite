@@ -1,0 +1,33 @@
+.group-heading{
+    text-align: center;
+    padding: 5px;
+}
+
+.tool-group{
+    /* margin: 2em; */
+}
+
+.tool-group:nth-child(odd) {
+    background: #e0e0e0;
+  }
+
+  #css_heading::before{
+      /* font-family: "Font Awesome 5 Free";  */
+      /* font-weight: 900;  */
+      /* content: "fa fa-css3"; */
+  }
+
+  .fa{
+      /* color: red; */
+  }
+
+  .construction-image{
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      -ms-transform: rotate(15deg); /* IE 9 */
+      transform: rotate(15deg);
+      -webkit-box-shadow: 22px 31px 37px 30px rgba(0,0,0,0.75);
+      -moz-box-shadow: 22px 31px 37px 30px rgba(0,0,0,0.75);
+      box-shadow: 22px 31px 37px 30px rgba(0,0,0,0.75);
+  }

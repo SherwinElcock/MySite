@@ -1,0 +1,158 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS Position</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+  <!-- Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/position.css">
+<link rel="stylesheet" href="../css/navbar.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <div id="main-navbar" class="main-nav">
+    <i class="fas fa-times" id="navClose"></i>
+    <a id="seLogo" href="../index.html">SE</a>
+    <ul id="navbar">
+        <li>
+            <a href="../blog.html" class="navLink">Blog</a>
+        </li>
+        <li>
+            <a href="../services.html" class="navLink">Services</a>
+        </li>
+    </ul>
+</div>
+
+  <div id="particles-js"></div>
+  <div id="positionIntro">
+<div class="jumbotron">
+<h1>Positioning Stuff</h1>    
+  <h3>static, relative, absolute, fixed, or sticky</h3>
+  </div>
+</div>
+<!-- <div class="container"> -->
+  <div class="container-fluid" id="mainContent">
+  <div class="container positionEx" id="static">
+    <img src="img/pushpin.png" alt="push pin">
+  <h4>Static</h4>
+  <p>This is the default.</p>
+  <p>Changing the top/bottom/left/right properties will do nothing.</p>
+      <div class="exampleDiv" id="staticExample">
+      <p>This div has it's position set to static.</p>
+    </div>
+  </div>
+  <div class="container positionEx" id="relative">
+    <img src="img/pushpin.png" alt="push pin" id="relativePin">
+    <h4>Relative</h4>
+    <p>If you set the position:relative - it is going to be placed relative to it's normal position... Where it would have been on the page. Had you not gone messing with it.</p>
+    <p>So, if we set top/bottom/left/right property it is going to be adjusted as such.</p>
+        <p>The positioning of a relative placed element has no effect on other elements on the page.</p>
+    <p>I can show you better than I can tell you.</p>
+    <p>This div - that has the black border has a height set to 500px.</p>
+    <p>Spicy jalapeno fatback nisi consectetur dolore sirloin minim voluptate quis pancetta. Proident incididunt chuck strip steak kevin dolor deserunt tri-tip non magna hamburger ea cupidatat. Shoulder jerky eiusmod anim, beef ribs dolor velit reprehenderit pariatur pork loin prosciutto. Dolore andouille deserunt boudin biltong ham hock mollit ex. Et dolore consequat, sed non pork belly laborum officia short loin spare ribs.
+
+Tenderloin officia in chicken. Turducken elit tail consectetur. Qui chuck ipsum laboris prosciutto frankfurter. Sint bacon filet mignon, jowl eu sausage kielbasa.</p>
+
+
+    <div class="exampleDiv" id="relativeExample">
+      <p>This div has it's position set to relative.</p>
+    <p>top: -100px;</p>
+    <p>left: 75px;</p>
+    <p>So it's moved 100px up and 75px left from where it would have been.</p>
+    <p>We'll cover some bacon ipsum text.</p>
+    </div>
+
+  </div>
+  <div class="container positionEx" id="absolute">
+        <img src="img/pushpin.png" alt="push pin" id="absolutePin">
+    <h4>Absolute</h4>
+    <p>Element that has its position set to absolute, is removed from the document flow.</p>
+        <div class="exampleDiv" id="absoluteExample">
+      <p>Absolute position.</p>
+      <p>Will take up full width of the parent element and height depends on content.</p>
+      <p>This div is set to: </p>
+      <p>right: 5px;</p>
+      <p>bottom: 5px;</p>
+  </div>
+    <p>So, unlike the relatively positioned elements others elements will act as though this does not exist.</p>
+    <p>It's position is based on its nearest ancestor. If its parent does not have position set of, absolute, relative or fixed.</p>
+    <p>It will then be set on the nearest ancestor that does.</p>
+        <p>Hit F12 and check out where that orange div is in the HTML structure.</p>
+    <div class="absDivs"></div>
+    <div class="absDivs"></div>
+    <div class="absDivs"></div>
+</div>
+    <div class="container positionEx" id="fixed">
+          <img src="img/pushpin.png" alt="push pin" id="fixedPin">
+    <h4>Fixed</h4>
+    <p>Kind of like absolute positioning, but it's going to stay in the viewport.</p>
+    <p>Think fixed navbar.</p>
+    <p>You should see an obnoxious blue div that reads:</p>
+    <p>"This bad boy has position: fixed;"</p>
+    <div id="fixedElement">
+      <p>This bad boy has position: fixed;</p>
+    </div>
+  </div>
+    <div class="container positionEx" id="sticky">
+                <img src="img/pushpin.png" alt="push pin" id="stickyPin">
+    <h4>Sticky</h4>
+    <p>Here's your two for one...</p>
+    <p>It's going to be relatively positioned until it hits the spot you define.</p>
+    <p>Then it will be treated as a sticky element.</p>
+    <p>Here we have the headings set to have:</p>
+    <p>position: sticky;</p>
+    <p>top: 0;</p>
+    <p>Scroll in the div below.</p>
+    <div class="container" id="stickyExample">
+      <p class="stickyHeading">Start - Stick 1</p>
+      <p>Spicy jalapeno fatback nisi consectetur dolore sirloin minim voluptate quis pancetta. Proident incididunt chuck strip steak kevin dolor deserunt tri-tip non magna hamburger ea cupidatat. Shoulder jerky eiusmod anim, beef ribs dolor velit reprehenderit pariatur pork loin prosciutto. Dolore andouille deserunt boudin biltong ham hock mollit ex. Et dolore consequat, sed non pork belly laborum officia short loin spare ribs.
+
+Short ribs ut do meatball in ribeye laborum commodo brisket est. Pork chop flank turducken sirloin buffalo corned beef, swine drumstick boudin alcatra short loin ut. Velit in anim prosciutto buffalo. Alcatra short ribs in swine andouille nostrud. Meatball hamburger sint, filet mignon buffalo tail beef ribs consequat ut pancetta drumstick picanha chicken. Doner ad ham hock culpa pork tongue. Buffalo ut salami, swine prosciutto excepteur ullamco andouille id t-bone.
+<p class="stickyHeading" id="secondStick">Second One</p>
+Salami shoulder sunt filet mignon ea brisket culpa magna, tail incididunt chicken irure labore excepteur leberkas. Velit tri-tip tempor ut duis ribeye ut tenderloin eiusmod biltong. Id pork loin culpa consectetur meatloaf in magna strip steak. Et sunt spare ribs lorem ham elit, hamburger leberkas laboris.
+
+Frankfurter pancetta ut, aliquip pork chop flank jerky. Culpa bresaola et, shankle veniam salami tempor porchetta strip steak bacon meatloaf ham hock. Anim sirloin rump tail ipsum eu meatball burgdoggen andouille qui. Pork anim in sausage capicola magna pork loin laboris nulla dolore dolore kevin aliquip labore. Ex nostrud nulla shankle picanha swine sint chuck.
+<p class="stickyHeading" id="thirdStick">Third One</p>
+<p>Tenderloin officia in chicken. Turducken elit tail consectetur. Qui chuck ipsum laboris prosciutto frankfurter. Sint bacon filet mignon, jowl eu sausage kielbasa.
+
+</p>
+<p>Brisket rump ut consectetur pariatur. Fatback pastrami consectetur non pancetta deserunt in tenderloin flank ut ex salami. Kielbasa minim dolore labore. Cupim biltong sunt picanha nulla prosciutto. Leberkas mollit pork belly andouille ham magna irure consectetur shank. Meatball bacon elit pastrami, adipisicing in deserunt burgdoggen pariatur ribeye. Short loin meatloaf proident, reprehenderit in dolore strip steak prosciutto flank aliquip excepteur nulla veniam pork belly pariatur.
+</p><p>
+Burgdoggen bresaola jerky pork chop, cillum kielbasa dolor sunt commodo. Capicola eiusmod in flank rump buffalo. Sunt biltong dolore turducken leberkas, filet mignon id. Burgdoggen voluptate labore porchetta fatback tri-tip kevin turkey ut alcatra sed in meatloaf pork loin ball tip.
+
+Sint kielbasa id lorem doner. Non elit deserunt, enim exercitation turducken meatloaf commodo ham hock kevin pork loin. Ground round tempor cupidatat ribeye ad jowl corned beef turkey minim. Deserunt beef ribs doner, turducken spare ribs elit esse ribeye ad fugiat ham hock pastrami mollit bacon shankle.</p>
+    </div>
+  </div>
+</div><!--End MainContent-->
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+   <!-- JS, Popper.js and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+</body>
+
+</html>

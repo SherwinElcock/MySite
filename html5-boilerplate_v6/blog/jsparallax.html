@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>GitHub Commands</title>
+      <meta name="GitHub Basics" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="manifest" href="site.webmanifest">
+      <link rel="apple-touch-icon" href="icon.png">
+      <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+      <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+       <link href='http://fonts.googleapis.com/css?family=Merienda+One' rel='stylesheet' type='text/css'>
+       <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="style/vocab.css"> -->
+      <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/parallax.css">
+      <link rel="stylesheet" href="css/heading.css">
+      <link rel="stylesheet" href="../css/navbar.css">
+      <link rel="stylesheet" href="../css/navbar.css">
+   </head>
+   <body>
+    <div id="main-navbar" class="main-nav">
+        <i class="fas fa-times" id="navClose"></i>
+        <a id="seLogo" href="../index.html">SE</a>
+        <ul id="navbar">
+            <li>
+                <a href="../blog.html" class="navLink">Blog</a>
+            </li>
+            <li>
+                <a href="../services.html" class="navLink">Services</a>
+            </li>
+        </ul>
+    </div>
+    <div class="jumbotron blog-intro">
+        <div id="particles-js"></div>
+        <h1 class="display-4">Parallax</h1>
+        <p class="lead">Scroll at different speeds...</p>
+       
+      </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <p>I know you've seen it.... The websites with the image at the top and as you scroll, it seems to stay in place
+                and everything rides over it. If you haven't seen it, I did it on my personal website... Check it out <a href="../index.html">here</a>.
+            </p>
+            <p>A quick google query for parallax effect is going to turn up countless results for libraries.</p>
+            <p>But why?</p>
+            <p>We'll get this down in a few lines of JavaScript, then it's just up to you to tinker with it, to get it to you liking.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+<code><p>let parallax1 = document.getElementById("opening")</p>
+    <p>  document.addEventListener('scroll', function (e) {</p>
+     <p>var offset = window.pageYOffset;</p>
+    <p>  parallax1.style.backgroundPositionY = offset * 0.7 + 'px';});</p>
+</div>
+<div class="container">
+    <div class="row">
+        <p>Easy enough right?</p>
+    </div>
+</div>
+<div id="pointer"><a href="/blog.html"><i class="fas fa-hand-point-left"></i></a></div>
+
+            <!-- JS, Popper.js and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+      <script src="js/plugins.js"></script>
+      <!-- <script src="js/main.js"></script> -->
+      <script src="js/anim_wow.js"></script>
+      <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+      <script>
+         window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+         ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+      </script>
+      <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+      <script type="text/javascript">new WOW().init();</script>
+      <script src="../js/particles.js"></script>
+      <script src="../js/app.js"></script>
+   </body>
+</html>

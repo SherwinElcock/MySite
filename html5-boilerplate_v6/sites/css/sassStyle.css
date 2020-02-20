@@ -1,0 +1,387 @@
+/*@import "codeSection";*/
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+#sassLand {
+  position: relative;
+  top: 0px;
+  height: 200px;
+  background-color: blue;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 2em;
+}
+
+#sassLand h1 {
+  font-family: "Mali", cursive;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 4em;
+  margin-top: 50px;
+}
+
+#sassLand p {
+  padding: 0em 2em;
+  font-family: "Mali", cursive;
+  text-align: center;
+}
+
+#landText {
+  margin: 0px;
+  height: 200px;
+/* background-color: #ffffff; */
+ 
+}
+
+p {
+  color: #FFFFFF;
+}
+
+#sassHeading {
+  color: #FFFFFF;
+  margin-top: 5em;
+}
+
+.codeXplain {
+  height: 100px;
+}
+
+#xSass {
+  background-color: #cc00cc;
+  color: #fff;
+}
+
+#xSass p {
+  color: white;
+}
+
+#pCss {
+  background-color: black;
+}
+
+#installation {
+  padding-top: 1em;
+}
+
+.command {
+  color: green;
+}
+
+.sectionHead {
+  font-family: "Montserrat", sans-serif;
+}
+
+#sideSections {
+  font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(to bottom, white, #3399ff);
+  position: fixed;
+  top: 35%;
+  left: 0;
+  width: 150px;
+  padding: 1em 0em;
+}
+#sideSections li {
+  padding: 0em 0em;
+  list-style-type: none;
+}
+#sideSections h4 {
+  text-align: center;
+}
+
+#theStuff {
+  margin-left: 151px;
+  padding-left: 1em;
+  padding-bottom: 5em;
+}
+
+.codeSection, .sassCode {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  width: 75%;
+  padding: 10px;
+  /*padding: $codePadding;*/
+  background-color: #000;
+}
+.codeSection p, .sassCode p {
+  color: green;
+}
+
+.sassCode {
+  background-color: #cc00cc;
+}
+
+.mixinExample {
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+  position: relative;
+  top: 2em;
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+
+.ourdiv, .badDiv, .goodDiv {
+  padding: 15px;
+  background-color: gray;
+  color: white;
+}
+
+.coolDiv, .placeDiv, .goodDiv {
+  @extends .ourdiv;
+  box-shadow: 5px 5px #888888;
+}
+
+.mehDiv {
+  @extends .cooldiv;
+  background-color: orange;
+}
+
+.goodDiv {
+  background-color: green;
+}
+
+.badDiv {
+  background-color: red;
+}
+
+.placeDiv {
+  font-size: 2em;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+#operatorsTab {
+  width: 31.25%;
+}
+
+h2 {
+  /*color: #991100 + 3;*/
+}
+
+.module {
+  padding: 15px;
+}
+
+#explain {
+  display: flex;
+  flex-direction: row;
+  height: 75px;
+  justify-content: space-around;
+}
+
+#explain p {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+}
+
+#windowGif {
+  margin: auto;
+  max-width: 75%;
+}
+
+#dont {
+  font-size: 3em;
+  color: red;
+  padding-top: 2em;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  #sideSections {
+    display: none;
+  }
+
+  #theStuff {
+    margin-left: 0em;
+    padding-left: 2em;
+    padding-right: 1em;
+  }
+}
+code {
+  color: white;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=sassStyle.css.map */
+#main-navbar {
+  z-index: 888;
+  width: 100%;
+  background-image: linear-gradient(260deg, #ff8c00 0%, #1e90ff 100%);
+  color: white;
+  box-shadow: 2px 2px 5px #000000;
+}
+
+#main-navbar > ul > li {
+  list-style-type: none;
+  color: white;
+  font-size: 1em;
+  justify-content: flex-end;
+  /*padding: 0em 2em;*/
+}
+
+#navbar {
+  text-align: center;
+  width: 100%;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+#navTog {
+  position: fixed;
+  bottom: 3em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 50px;
+  height: 50px;
+  background-color: dodgerblue;
+  border-radius: 50%;
+  z-index: 1000;
+  text-align: center;
+  color: white;
+  box-shadow: 2px -2px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 2px -2px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 2px -2px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 2px -2px rgba(0, 0, 0, 0.6);
+  /*border-radius:100px;*/
+}
+#navTog p {
+  margin-top: 10px;
+}
+#seLogo {
+  font-family: "Merienda One", cursive;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  top: 1em;
+  font-size: 2em;
+  /* padding-left: 2em; */
+}
+#navbar{
+    padding: 0px;
+}
+.active {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    border-radius: 50%;
+    text-align: CENTER;
+    height: 100%;
+    width: 100%;
+    height: 75%;
+    font-size: 18px;
+    line-height: 6em;
+  background-image: linear-gradient(260deg, #ff8c00 0%, #1e90ff 100%);
+ 
+}
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }
+
+#navClose {
+  position: absolute;
+  right: 2em;
+  top: 2em;
+}
+
+#main-navbar a {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+  padding-top: 7px;
+}
+#navbar > ul {
+    list-style-position: inside;
+  }
+
+  #main-navbar {
+    position: fixed;
+    bottom: 0;
+    max-height: 40px;
+  }
+
+  #navClose {
+    display: none;
+  }
+
+  #navbar {
+    top: 25%;
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #navbar {
+    display: flex;
+    flex: auto;
+    padding-top: 10px;
+  }
+
+  .main-nav li {
+    margin: 0;
+    flex: 1;
+  }
+
+  #main-navbar > p {
+    margin-top: 0;
+    padding-left: 5px;
+  }
+
+  #seLogo {
+    padding-left: 2em;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .logo:hover,
+  .nav-links:hover {
+    color: white;
+  }
+
+  #particles-js {
+    position: absolute;
+    color: #ffffff;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*Desktop NavBar*/
+@media screen and (min-width: 768px) {
+
+  #navTog {
+    display: none;
+  }
+  #main-navbar {
+    position: fixed;
+    top: 0;
+    max-height: 40px;
+    /*height: 100%;*/
+    /*width: 100%;*/
+  }
+
+ 

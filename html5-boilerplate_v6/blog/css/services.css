@@ -1,0 +1,10 @@
+.construction-image{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    -ms-transform: rotate(15deg); /* IE 9 */
+    transform: rotate(15deg);
+    -webkit-box-shadow: 22px 31px 37px 30px rgba(0,0,0,0.75);
+    -moz-box-shadow: 22px 31px 37px 30px rgba(0,0,0,0.75);
+    box-shadow: 22px 31px 37px 30px rgba(0,0,0,0.75);
+}

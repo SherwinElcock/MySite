@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>GitHub Vocab</title>
+  <meta name="GitHub Basics" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style/vocab.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="css/vocabCss.css">
+
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<div id="main-navbar" class="main-nav">
+  <i class="fas fa-times" id="navClose"></i>
+  <a id="seLogo" href="../index.html">SE</a>
+  <ul id="navbar">
+      <li>
+          <a href="../blog.html" class="navLink">Blog</a>
+      </li>
+      <li>
+          <a href="../services.html" class="navLink">Services</a>
+      </li>
+  </ul>
+</div>
+
+<div id="particles-js"></div>
+
+<div class="jumbotron">
+<h1>Positioning Stuff</h1>    
+<h3>static, relative, absolute, fixed, or sticky</h3>
+</div>
+</div>
+<div id="defOpening">
+  <div id="landText">
+    <h1 id="heading">GitHub Vocab</h1>
+    <p class="lead">Some common terms you'll hear.</p>
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="term" id="branch">Add</h3>
+      <p class="definition">Adds new files or changes to files. Nothing gets stored, it's on the
+        dock, ready for the git commit command to send it on its way.
+      </p>
+      <h3 class="term" id="branch">Branch</h3>
+      <p class="definition">A break-off of your project. It's in your repository, but changes there don't affect your master branch. Say you want to test something,
+        you create a branch, make and test your changes. Once you are sure everything is OK, merge into master.
+        If you mess something up, you're on a branch, the master is fine.</p>
+      <h3 class="term" id="clone">Clone</h3>
+      <p class="definition">A copy of a repository that is on your local machine not on a server elsewhere.
+        This is where you mess around.</p>
+      <h3 class="term">Commit</h3>
+      <p class="definition">A change/revision to a file/group of files. You want to add a message as to what was changed.</p>
+      <h3 class="term">Diff</h3>
+      <p class="definition">Difference between two commits. Normally shows what is added/removed since the last commit.</p>
+      <h3 class="term">Fork</h3>
+      <p class="definition">A copy of someone else's repository that will be in your account. Let's you mess with it and not
+        mess with theirs. Think you have something worthwhile, you can submit a pull request and see if the author will
+        update it with your changes. Also let's you stay recent by pulling original again.</p>
+      <h3 class="term">Merge</h3>
+      <p class="definition">When the changes from one branch are applied to another. Usually a pull request.</p>
+      <h3 class="term">Pull</h3>
+      <p class="definition">When you pull in changes and merge them.
+        Changes have been made, you'll want to pull those in.</p>
+      <h3 class="term">Pull request</h3>
+      <p class="definition">These are the proposed changes to a repo. Can either be accepted or rejected.</p>
+      <h3 class="term">Push</h3>
+      <p class="definition">Pushing the changes you've committed to a remote repository... GitHub.
+        You make a change on your clone, you'll have to push those changes so others can access them.</p>
+      <h3 class="term">Remote</h3>
+      <p class="definition">Version that is on the remote server, GitHub. This is what gets cloned and your changes
+        are merged here.</p>
+      <h3 class="term" id="repository">Repository</h3>
+      <p class="definition">The folder of everything. It holds all of your files and each revision of the files.</p>
+      <h3 class="term">Upstream</h3>
+      <p class="definition">This working version, the main copy on the original repository.
+        It's upstream as that is where all other changes come from. You are working on a downstream form or branch.</p>
+    </div>
+  </div>
+</div>
+
+<div id="back2Main"><a href="gitbasics.html">Back to basics</a></div>
+<div id="pointer"><a href="/blog.html"><i class="fas fa-hand-point-left"></i></a></div>
+
+<footer id="footer">Made by SE 2018</footer>
+<script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
+<script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<script src="../js/particles.js"></script>
+<script src="../js/app.js"></script>
+</body>
+
+</html>
